@@ -1,20 +1,49 @@
 const grid = document.getElementById("grid");
-const btn = document.getElementById("btn");
+const playBtn = document.getElementById("playBtn");
+const difficulty = document.getElementById("difficulty");
 
-function createSquare() {
+function createSquare(squareClass) {
     const div = document.createElement('div');
     div.classList.add("square");
+    div.classList.add(squareClass);
     return div;
 }
 
-btn.addEventListener('click', function() {
-    for (let i = 1; i <= 100; i++) {
-        let element = createSquare();
-        element.addEventListener('click', function () {
-            this.classList.toggle('active');
-        })
-        element.innerHTML = i;
-        grid.append(element);
+playBtn.addEventListener('click', function() {
+    if (difficulty.value === "easy") {
+        grid.replaceChildren();
+        for (let i = 1; i <= 100; i++) {
+            let element = createSquare("square-easy");
+            element.addEventListener('click', function () {
+                this.classList.toggle('active');
+            })
+            element.innerHTML = i;
+            grid.append(element);
+        }
     }
-}, {once: true});
+
+    else if (difficulty.value === "medium") {   
+        grid.replaceChildren();
+        for (let i = 1; i <= 81; i++) {
+            let element = createSquare("square-medium");
+            element.addEventListener('click', function () {
+                this.classList.toggle('active');
+            })
+            element.innerHTML = i;
+            grid.append(element);
+        }
+    }
+
+    else if (difficulty.value === "hard") {      
+        grid.replaceChildren();
+        for (let i = 1; i <= 49; i++) {
+            let element = createSquare("square-hard");
+            element.addEventListener('click', function () {
+                this.classList.toggle('active');
+            })
+            element.innerHTML = i;
+            grid.append(element);
+        }
+    }
+});
 

@@ -41,7 +41,7 @@ header img {
 main {
     background-color: aquamarine;
     display: flex;
-    height: calc(100% - 200px);
+    min-height: calc(100% - 200px);
 }
 
 #grid {
@@ -55,11 +55,22 @@ main {
 
 .square {
     border: 1px solid black;
-    width: calc(100%/10);
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.square-easy {
+    width: calc(100% / 10);
+}
+
+.square-medium {
+    width: calc(100% / 9);
+}
+
+.square-hard {
+    width: calc(100% / 7);
 }
 
 .active {
