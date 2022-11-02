@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+#grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.square {
+    border: 1px solid black;
+    width: calc(100%/10);
+    aspect-ratio: 1/1;
+}
+
+.active {
+    background-color: orange;
+}
