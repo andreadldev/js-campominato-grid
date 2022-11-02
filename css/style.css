@@ -44,8 +44,28 @@ header img {
     height: 35px;
 }
 
-#btn {
-    padding: 2px 25px;
+#playBtn {
+    padding: 3px 25px;
+}
+
+select {
+    padding: 2px 0;
+    padding-right: 60px;
+}
+
+#playBtn, select {
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #efefef;
+}
+
+#playBtn:hover, select:hover {
+    background-color: lightgray;
+}
+
+select:focus {
+    background-color: #efefef;
 }
 
 /* ------------------MAIN------------------ */
