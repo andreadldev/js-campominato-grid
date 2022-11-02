@@ -16,6 +16,7 @@ playBtn.addEventListener('click', function() {
             let element = createSquare("square-easy");
             element.addEventListener('click', function () {
                 this.classList.toggle('active');
+                console.log(i);
             })
             element.innerHTML = i;
             grid.append(element);
@@ -28,6 +29,7 @@ playBtn.addEventListener('click', function() {
             let element = createSquare("square-medium");
             element.addEventListener('click', function () {
                 this.classList.toggle('active');
+                console.log(i);
             })
             element.innerHTML = i;
             grid.append(element);
@@ -40,6 +42,7 @@ playBtn.addEventListener('click', function() {
             let element = createSquare("square-hard");
             element.addEventListener('click', function () {
                 this.classList.toggle('active');
+                console.log(i);
             })
             element.innerHTML = i;
             grid.append(element);
