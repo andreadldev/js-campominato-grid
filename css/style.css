@@ -44,6 +44,16 @@ header img {
     height: 35px;
 }
 
+header span {
+    display: block;
+}
+
+@media screen and ( min-width: 768px ) {
+    header span {
+        display: inline;
+    }
+}
+
 #playBtn {
     padding: 3px 25px;
 }
